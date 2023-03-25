@@ -1,0 +1,88 @@
+body {
+  background-image: url('Gambar/nct127-text1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  /*ketebalan font*/
+  font-weight: 300;
+}
+.icon-foto {
+  width: 128px;
+  height: 128px;
+  margin-left: 32%;
+}
+.tulisan_login {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  font-size: 18px;
+  text-transform: capitalize;
+
+  color: #000000;
+  /*membuat semua huruf menjadi kapital*/
+}
+
+.kotak_login {
+  font-family: 'Poppins';
+  width: 350px;
+  background: white;
+  /*meletakkan form ke tengah*/
+  margin: 80px auto;
+  padding: 30px 20px;
+  background: #ffffff;
+  box-shadow: 0px 0px 115px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+
+label {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-size: 13pt;
+  font-weight: 500;
+  line-height: 15px;
+  /* identical to box height */
+
+  text-transform: capitalize;
+
+  color: #000000;
+}
+
+.form_login {
+  /*membuat lebar form penuh*/
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  font-size: 11pt;
+  margin-bottom: 20px;
+  background: #d9d9d9;
+  border-radius: 9px;
+}
+
+.tombol_login {
+  background: #4884df;
+  color: white;
+  font-size: 11pt;
+  width: 100%;
+  border: none;
+  border-radius: 9px;
+  margin-top: 5%;
+  padding: 10px 20px;
+}
+
+.link {
+  color: #232323;
+  text-decoration: none;
+  font-size: 10pt;
+}
+
+.alert {
+  background: #e44e4e;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #b32929;
+}

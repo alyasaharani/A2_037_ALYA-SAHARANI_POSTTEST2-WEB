@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <title>FANBASE NCT</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/Style.css" />
+    <link rel="icon" type="image/png" href="Gambar/kpop1.jpg" />
+  </head>
+  <body background="Gambar/kpop1.png">
+    <div class="header">
+      <h1>NCTzen Base</h1>
+    </div>
+
+    <div class="topnav center">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="About.html">About NCT</a></li>
+        <li><a href="List.html">List Unit</a></li>
+        <li><a href="Contact.html">Member</a></li>
+        <li><a href="Data_Diri.html" style="color: black; background-color: #ddd; border-radius: 25px">Join Fanbase</a></li>
+        <li><a href="Profile.html">Registrasi</a></li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <div class="column side"></div>
+
+      <div class="column middle">
+        <div class="card" style="margin-bottom: 13%; margin-top: 13%; width: 52%; height: 170%; margin-left: auto; margin-right: auto">
+          <center>
+            <form>
+              <table style="font-family: Cambria Math; font-size: 18px">
+                <tr>
+                  <td>Nama Anda</td>
+                  <td>: <input type="text" name="nama" id="form_nama" /></td>
+                </tr>
+                <tr>
+                  <td>Email</td>
+                  <td>: <input type="email" name="email" id="form_email" /></td>
+                </tr>
+                <tr>
+                  <td>Jenis Kelamin</td>
+                  <td>: <input type="radio" name="jk" value="Perempuan" id="form_jk" />Perempuan</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>&nbsp;<input type="radio" name="jk" value="Laki-Laki" id="form_jk" />Laki-Laki</td>
+                </tr>
+                <tr>
+                  <td>No. Telp</td>
+                  <td>: <input type="text" name="nt" id="form_nomor" /></td>
+                </tr>
+                <tr>
+                  <td>Domisili</td>
+                  <td>: <input type="text" name="alamat" id="form_alamat" /></td>
+                </tr>
+                <tr>
+                  <td>Foto Profil</td>
+                  <td>: <input type="file" name="file" accept="image/png, image/jpeg" /></td>
+                </tr>
+                <tr>
+                  <td>Pilih Unit Favorit</td>
+                  <td>
+                    :
+                    <select name="KPOP" id="daf_unit">
+                      <option value="">-- NCT --</option>
+                      <option value="NCT U">NCT U</option>
+                      <option value="NCT 127">NCT 127</option>
+                      <option value="NCT Dream">NCT Dream</option>
+                      <option value="WayV">WayV</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td><input type="button" id="kirim" value="Kirim" /></td>
+                </tr>
+              </table>
+            </form>
+          </center>
+          <center>
+            <td>Setelah Memasukkan Data Tolong Di Refresh Yaa!</td>
+          </center>
+          <center>
+            <br /><br />
+            <h3>Data Diri Yang Anda Inputkan</h3>
+            <p><span id="data"></span></p>
+            <p><span id="data1"></span></p>
+            <p><span id="data2"></span></p>
+            <p><span id="data3"></span></p>
+            <p><span id="data4"></span></p>
+            <p><span id="data5"></span></p>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Created by Alya Saharani | © 2023</p>
+    </footer>
+  </body>
+  <script>
+    const tombol = document.getElementById('kirim');
+    tombol.onclick = regis;
+
+    function regis(e) {
+      e.preventDefault();
+
+      const Nama = document.getElementById('form_nama');
+      const Email = document.getElementById('form_email');
+      const Jk = document.getElementById('form_jk');
+      const Nomor = document.getElementById('form_nomor');
+      const Alamat = document.getElementById('form_alamat');
+      const Unit = document.getElementById('daf_unit');
+
+      sessionStorage.setItem('Nama', Nama.value);
+      sessionStorage.setItem('Email', Email.value);
+      sessionStorage.setItem('Jk', Jk.value);
+      sessionStorage.setItem('Nomor', Nomor.value);
+      sessionStorage.setItem('Alamat', Alamat.value);
+      sessionStorage.setItem('Unit', Unit.value);
+
+      alert('Berhasil Mengisi Data Diri');
+    }
+
+    const nama = sessionStorage.getItem('Nama');
+    const email = sessionStorage.getItem('Email');
+    const jk = sessionStorage.getItem('Jk');
+    const nomor = sessionStorage.getItem('Nomor');
+    const alamat = sessionStorage.getItem('Alamat');
+    const unit = sessionStorage.getItem('Unit');
+
+    const data = document.getElementById('data');
+    const data1 = document.getElementById('data1');
+    const data2 = document.getElementById('data2');
+    const data3 = document.getElementById('data3');
+    const data4 = document.getElementById('data4');
+    const data5 = document.getElementById('data5');
+
+    data.innerHTML = nama;
+    data1.innerHTML = email;
+    data2.innerHTML = jk;
+    data3.innerHTML = nomor;
+    data4.innerHTML = alamat;
+    data5.innerHTML = unit;
+  </script>
+</html>
